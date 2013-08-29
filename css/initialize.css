@@ -1,0 +1,128 @@
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, article,aside, details,figcaption, figure, footer, header, hgroup,main, nav, section, summary{	margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 14px;font-family: inherit;vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {display: block;}
+html,button,input,select,textarea {color: #38393a;font-family: "HelvNeuLt", Verdana, Arial;}
+body {margin: 0;font-size: 100%;line-height: 1.2em;font-family: "HelvNeuLt", Verdana, Arial}
+:focus{outline: 0;}
+a{text-decoration:none;}
+a:active,a:hover{outline: 0;}
+dl,menu,ol,ul,dt,li,dd {margin: 0;	list-style:none; list-style-image:none;}
+img {border: 0;-ms-interpolation-mode: bicubic;vertical-align:middle;}
+form {margin: 0;}
+button,input,select,textarea {font-size: 16px;margin: 0;vertical-align: top;*vertical-align: middle;}
+input[type="checkbox"],input[type="radio"] {padding: 0;}
+.hide {display: none;}
+.invisible {visibility: hidden;}
+.clearfix:before,.clearfix:after {content: " ";display: table;}
+.clearfix:after {clear: both;}
+.clearfix {*zoom: 1;}
+
+body{background:#333;}
+.wrapper{margin:100px;}
+img{width:100%;}
+.relative_text, .tileWindow,.liveTile{width:160px; height:160px;}
+.tileWindow{position:relative;overflow:hidden;display:block;}
+.peekTile,.mainTile{position:absolute;}
+.peekTile{left:0; top:-160px;}
+.mainTile{left:0; top:0;}
+.relative_text{position:relative;}
+.peekTile{background:#13419F;}
+.main_content{position:absolute; left: 10px; bottom:10px; color:#fff; font-family:Segoe UI, Verdana, Arial; font-size:20px;}
+
+
+
+@-webkit-keyframes livePeek {
+ 0%   { top:-160px; }
+  10%   { top:-160px; }
+	20%	 { top:-80px; }
+	40%	 { top:-80px; }
+	50%	 { top:0px; }
+	80%	 { top:0px; }
+	90%	 { top:-160px; }
+  100% { top:-160px; }
+}
+@-moz-keyframes livePeek {
+  0%   { top:-160px; }
+  10%   { top:-160px; }
+	20%	 { top:-80px; }
+	40%	 { top:-80px; }
+	50%	 { top:0px; }
+	80%	 { top:0px; }
+	90%	 { top:-160px; }
+  100% { top:-160px; }
+}
+@-o-keyframes livePeek {
+	0%   { top:-160px; }
+  10%   { top:-160px; }
+	20%	 { top:-80px; }
+	40%	 { top:-80px; }
+	50%	 { top:0px; }
+	80%	 { top:0px; }
+	90%	 { top:-160px; }
+  100% { top:-160px; }
+}
+@keyframes livePeek {
+	0%   { top:-160px; }
+  10%   { top:-160px; }
+	20%	 { top:-80px; }
+	40%	 { top:-80px; }
+	50%	 { top:0px; }
+	80%	 { top:0px; }
+	90%	 { top:-160px; }
+  100% { top:-160px; }
+}
+
+@-webkit-keyframes liveMain {
+	0%   { top:0px; }
+  10%   { top:0px; }
+	20%	 { top:80px; }
+	40%	 { top:80px; }
+	50%	 { top:160px; }
+	80%	 { top:160px; }
+	90%	 { top:0px; }
+  100% { top:0px; }
+}
+@-moz-keyframes liveMain {
+  0%   { top:0px; }
+  10%   { top:0px; }
+	20%	 { top:80px; }
+	40%	 { top:80px; }
+	50%	 { top:160px; }
+	80%	 { top:160px; }
+	90%	 { top:0px; }
+  100% { top:0px; }
+}
+@-o-keyframes liveMain {
+  0%   { top:0px; }
+  10%   { top:0px; }
+	20%	 { top:80px; }
+	40%	 { top:80px; }
+	50%	 { top:160px; }
+	80%	 { top:160px; }
+	90%	 { top:0px; }
+  100% { top:0px; }
+}
+@keyframes liveMain {
+  0%   { top:0px; }
+  10%   { top:0px; }
+	20%	 { top:80px; }
+	40%	 { top:80px; }
+	50%	 { top:160px; }
+	80%	 { top:160px; }
+	90%	 { top:0px; }
+  100% { top:0px; }
+}
+
+
+
+.peekTile {
+  -webkit-animation: livePeek 10s infinite; /* Safari 4+ */
+  -moz-animation:    livePeek 10s infinite; /* Fx 5+ */
+  -o-animation:      livePeek 10s infinite; /* Opera 12+ */
+  animation:         livePeek 10s infinite; /* IE 10+ */
+}
+.mainTile {
+  -webkit-animation: liveMain 10s infinite; /* Safari 4+ */
+  -moz-animation:    liveMain 10s infinite; /* Fx 5+ */
+  -o-animation:      liveMain 10s infinite; /* Opera 12+ */
+  animation:         liveMain 10s infinite; /* IE 10+ */
+}
