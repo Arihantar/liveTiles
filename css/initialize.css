@@ -49,3 +49,21 @@ img{width:100%;}
 /* initialize animation default*/
 .peekTile {-webkit-animation: livePeek 10s infinite;-moz-animation: livePeek 10s infinite;-o-animation:livePeek 10s infinite;animation:livePeek 10s infinite;}
 .mainTile {-webkit-animation: liveMain 10s infinite;-moz-animation: liveMain 10s infinite;-o-animation:liveMain 10s infinite;animation:liveMain 10s infinite;}
+
+
+/* livepeek delay+20% */
+@-webkit-keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
+@-moz-keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
+@-o-keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
+@keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
+
+/* livemain delay+20% */
+@-webkit-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
+@-moz-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
+@-o-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
+@keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
+
+/* initialize animation delay+20%*/
+.peekTile {-webkit-animation: livePeek 10s infinite;-moz-animation: livePeek 10s infinite;-o-animation:livePeek 10s infinite;animation:livePeek 10s infinite;}
+.mainTile {-webkit-animation: liveMain 10s infinite;-moz-animation: liveMain 10s infinite;-o-animation:liveMain 10s infinite;animation:liveMain 10s infinite;}
+
