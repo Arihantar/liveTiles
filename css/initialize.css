@@ -19,51 +19,55 @@ input[type="checkbox"],input[type="radio"] {padding: 0;}
 
 /* standard stuff code */
 body{background:#333;}
-.wrapper{margin:100px;}
+.lumiaWrapper{background:url(../img/presentation/lumia-bg.png) no-repeat left top; padding: 150px 100px 150% 110px; height: 695px; width: 425px;}
+
+/* grid styling */
+.tileWindow{float:left; margin:5px;}
 
 /* tiles code */
 img{width:100%;}
-.tileWindow,.liveTile{width:160px; height:160px;}
+.tileWindow,.liveTile{width:202px; height:202px;}
 .tileWindow{position:relative;overflow:hidden;display:block;}
 .peekTile,.mainTile{position:absolute;}
-.peekTile{left:0; top:-160px;}
+.peekTile{left:0; top:-100%;}
 .mainTile{left:0; top:0;}
-.relative_text{position:relative; display:table-cell;padding:0 10px;margin:10px 0;vertical-align:bottom;height:150px; width:150px;color:#fff; font-family:Segoe UI, Verdana, Arial; font-size:25px;line-height:30px;}
+.relativeText{position:relative; display:table-cell;padding:0 10px;margin:10px 0;vertical-align:bottom;height:192px; width:192px;color:#fff; font-family:Segoe UI, Verdana, Arial; font-size:30px;line-height:30px;}
 .peekTile{background:#13419F;}
 
-
+.tileWindow.fullWidth, .tileWindow.fullWidth .liveTile{width:414px}
+.tileWindow.fullWidth .relativeText{width:404px}
+.tileWindow.fullWidth .mainTile{height:202px;overflow:hidden};
 /* keyframe animation  */
 
-/* livepeek default */
-@-webkit-keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
-@-moz-keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
-@-o-keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
-@keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
+/* livepeek default */ 	
+@-webkit-keyframes livePeek {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}}
+@-moz-keyframes livePeek {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}}
+@-o-keyframes livePeek {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}}
+@keyframes livePeek {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}}
 
 /* livemain default */
-@-webkit-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
-@-moz-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
-@-o-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
-@keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
+@-webkit-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:50%;}40%{top:50%;}50%{top:100%;}80%{top:100%;}90%{top:0px;}100% {top:0px;}}
+@-moz-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:50%;}40%{top:50%;}50%{top:100%;}80%{top:100%;}90%{top:0px;}100% {top:0px;}}
+@-o-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:50%;}40%{top:50%;}50%{top:100%;}80%{top:100%;}90%{top:0px;}100% {top:0px;}}
+@keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:50%;}40%{top:50%;}50%{top:100%;}80%{top:100%;}90%{top:0px;}100% {top:0px;}}
 
 /* initialize animation default*/
 .peekTile {-webkit-animation: livePeek 10s infinite;-moz-animation: livePeek 10s infinite;-o-animation:livePeek 10s infinite;animation:livePeek 10s infinite;}
 .mainTile {-webkit-animation: liveMain 10s infinite;-moz-animation: liveMain 10s infinite;-o-animation:liveMain 10s infinite;animation:liveMain 10s infinite;}
 
+/* livepeek default */ 	
+@-webkit-keyframes peekDelay20 {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}} 
+@-moz-keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}} 
+@-o-keyframes peekDelay20 {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}} 
+@keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}}
 
-/* livepeek delay+20% */
-@-webkit-keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
-@-moz-keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
-@-o-keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
-@keyframes livePeek {0%{top:-160px;}10%{top:-160px;}20%{top:-80px;}40%{top:-80px;}50%{top:0px;}80%{top:0px;}90%{top:-160px;}100% {top:-160px;}}
+/* livemain default */
+@-webkit-keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
+@-moz-keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
+@-o-keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
+@keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
 
-/* livemain delay+20% */
-@-webkit-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
-@-moz-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
-@-o-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
-@keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:80px;}40%{top:80px;}50%{top:160px;}80%{top:160px;}90%{top:0px;}100% {top:0px;}}
 
-/* initialize animation delay+20%*/
-.peekTile {-webkit-animation: livePeek 10s infinite;-moz-animation: livePeek 10s infinite;-o-animation:livePeek 10s infinite;animation:livePeek 10s infinite;}
-.mainTile {-webkit-animation: liveMain 10s infinite;-moz-animation: liveMain 10s infinite;-o-animation:liveMain 10s infinite;animation:liveMain 10s infinite;}
-
+/* initialize delay 20 animation */
+.peekTile.delay20 {-webkit-animation: peekDelay20 10s infinite;-moz-animation: peekDelay20 10s infinite;-o-animation:peekDelay20 10s infinite;animation:peekDelay20 10s infinite;}
+.mainTile.delay20 {-webkit-animation: liveDelay20 10s infinite;-moz-animation: liveDelay20 10s infinite;-o-animation:liveDelay20 10s infinite;animation:liveDelay20 10s infinite;}
