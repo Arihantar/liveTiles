@@ -19,7 +19,7 @@ input[type="checkbox"],input[type="radio"] {padding: 0;}
 
 /* standard stuff code */
 body{background:#333;}
-.lumiaWrapper{background:url(../img/presentation/lumia-bg.png) no-repeat left top; padding: 150px 100px 150% 110px; height: 695px; width: 425px;}
+.lumiaWrapper{background:url(../img/presentation/lumia-bg.png) no-repeat left top; padding: 150px 100px 150px 110px; height: 695px; width: 425px;}
 
 /* grid styling */
 .tileWindow{float:left; margin:5px;}
@@ -36,7 +36,7 @@ img{width:100%;}
 
 .tileWindow.fullWidth, .tileWindow.fullWidth .liveTile{width:414px}
 .tileWindow.fullWidth .relativeText{width:404px}
-.tileWindow.fullWidth .mainTile{height:202px;overflow:hidden};
+.tileWindow.fullWidth .mainTile{height:202px;overflow:hidden}
 /* keyframe animation  */
 
 /* livepeek default */ 	
@@ -55,13 +55,13 @@ img{width:100%;}
 .peekTile {-webkit-animation: livePeek 10s infinite;-moz-animation: livePeek 10s infinite;-o-animation:livePeek 10s infinite;animation:livePeek 10s infinite;}
 .mainTile {-webkit-animation: liveMain 10s infinite;-moz-animation: liveMain 10s infinite;-o-animation:liveMain 10s infinite;animation:liveMain 10s infinite;}
 
-/* livepeek default */ 	
-@-webkit-keyframes peekDelay20 {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}} 
+/* livepeek peekDelay20 */ 	
+@-webkit-keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}} 
 @-moz-keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}} 
-@-o-keyframes peekDelay20 {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}} 
+@-o-keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}} 
 @keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}}
 
-/* livemain default */
+/* livemain liveDelay20 */
 @-webkit-keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
 @-moz-keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
 @-o-keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
