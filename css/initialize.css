@@ -1,3 +1,4 @@
+/* reset code */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, article,aside, details,figcaption, figure, footer, header, hgroup,main, nav, section, summary{	margin: 0;padding: 0;border: 0;outline: 0;font-weight: inherit;font-style: inherit;font-size: 14px;font-family: inherit;vertical-align: baseline;}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary {display: block;}
 html,button,input,select,textarea {color: #38393a;font-family: "HelvNeuLt", Verdana, Arial;}
@@ -16,8 +17,11 @@ input[type="checkbox"],input[type="radio"] {padding: 0;}
 .clearfix:after {clear: both;}
 .clearfix {*zoom: 1;}
 
+/* standard stuff code */
 body{background:#333;}
 .wrapper{margin:100px;}
+
+/* tiles code */
 img{width:100%;}
 .relative_text, .tileWindow,.liveTile{width:160px; height:160px;}
 .tileWindow{position:relative;overflow:hidden;display:block;}
@@ -29,7 +33,7 @@ img{width:100%;}
 .main_content{position:absolute; left: 10px; bottom:10px; color:#fff; font-family:Segoe UI, Verdana, Arial; font-size:20px;}
 
 
-
+/* keyframe animation  */
 @-webkit-keyframes livePeek {
  0%   { top:-160px; }
   10%   { top:-160px; }
