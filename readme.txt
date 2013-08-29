@@ -1,4 +1,4 @@
-## liveTiles v1.0
+## liveTiles v1.1 beta
 
 liveTiles is HTML5 and CSS3 animation project that creates a live tile experience similar to the windows Modern UI. This project is still under construction so only download it if you know what you are doing and wish to extend it sans support.
 
