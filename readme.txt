@@ -7,7 +7,8 @@ watch the Project in action on its page http://sharmikthakar.com/liveTiles
 
 ## Features
 
-* CSS3 animation powered live tiles.
+* HTML5 and CSS3 animation powered live tiles.
+* Easy to Set up.
 
 
 ## Roadmap
