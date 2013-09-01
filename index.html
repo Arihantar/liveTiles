@@ -10,21 +10,42 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
+		<h1>Stuffs ducked up in chrome. Use FF or IE10</h1>
 		<div class="lumiaWrapper">
 			<div class="tileGrid clearfix">
-				<a href="http://www.sharmikthakar.com" class="tileWindow" title="Sharmik Thakar">
-					<div class="liveTile peekTile"><div class="relativeText">Me</div></div>
-					<div class="liveTile mainTile"><img src="img/me-pic.jpg" alt="Profile Pic"/></div>
+				<a class="liveTile" href="#" data-size="medium" title="Sharmik Thakar">						
+					<div class="mainTile"><img src="img/me-pic.jpg" alt="Profile Pic"/></div>
 				</a> <!-- tile -->
-				<a href="http://www.sharmikthakar.com" class="tileWindow" title="Flexible Bottom Right Aligned Content">
-					<div class="liveTile peekTile"><div class="relativeText">Spoiler Sean Bean</div></div>
-					<div class="liveTile mainTile"><img src="img/profile-pic.jpg" alt="Sean Bean"/></div>
+				<a class="liveTile" href="#" title="Spoiler Sean Bean">
+					<div class="mainTile"><img src="img/profile-pic.jpg" alt="Sean Bean"/></div>
 				</a> <!-- tile -->
-				<a href="https://github.com/sharmikthakar/liveTiles" class="tileWindow fullWidth" title="Obviously">
-					<div class="liveTile peekTile delay20"><div class="relativeText">New stuff in Dev.</div></div>
-					<div class="liveTile mainTile delay20"><img src="img/obvious.jpg" alt="You Dont Say"/></div>
+				<a class="liveTile" href="#" title="Edward Elric" data-update="I am not a pipsqueak!" data-sync="minus50" data-tileColor="#f00">
+					<div class="mainTile"><img src="img/edward.jpg" alt="Sean Bean"/></div>
 				</a> <!-- tile -->
-			</div>			
+				<!-- small tiles -->
+				<a class="liveTile" href="#" data-size="small" title="Phone" data-update="5">
+					
+					<div class="mainTile"><img src="img/phone.jpg" alt="Phone"/></div>
+				</a> <!-- tile -->
+				<a class="liveTile" href="#" data-size="small" title="Edward Elric">					
+					<div class="mainTile"><img src="img/messages.jpg" alt="Messages"/></div>
+				</a> <!-- tile -->
+				<a class="liveTile" href="#" data-size="small" title="Internet Explorer">					
+					<div class="mainTile"><img src="img/ie.jpg" alt="Internet Explorer"/></div>
+				</a> <!-- tile -->
+				<a class="liveTile" href="#" data-size="small" title="Outlook" data-update="2">	
+					<div class="mainTile"><img src="img/outlook.jpg" alt="Outlook"/></div>
+				</a> <!-- tile -->
+				<!-- small tiles end -->
+				<a class="liveTile" href="https://github.com/sharmikthakar/liveTiles" data-size="large" data-tileColor="#333" data-sync="minus50" title="New Stuff in Development">					
+					<div class="mainTile"><img src="img/obvious.jpg" alt="You Dont Say"/></div>
+				</a> <!-- tile -->				
+			</div>
 		</div><!-- wrapper -->        
+		<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+		<script src="js/vendor/jquery-1.10.1.min.js"></script>        
+
+        <script src="js/liveTiles.js"></script>
+		
     </body>
 </html>

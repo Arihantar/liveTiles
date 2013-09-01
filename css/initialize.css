@@ -18,56 +18,81 @@ input[type="checkbox"],input[type="radio"] {padding: 0;}
 .clearfix {*zoom: 1;}
 
 /* standard stuff code */
-body{background:#333;}
-.lumiaWrapper{background:url(../img/presentation/lumia-bg.png) no-repeat left top; padding: 150px 100px 150px 110px; height: 695px; width: 425px;}
+body{background:#f0f0f0;}
+h1{font-size:20px; text-align:center; line-height:25px;}
+.lumiaWrapper{background:url(../img/presentation/lumia-bg.png) no-repeat left top; padding: 150px 100px 150px 110px; height: 695px; width: 425px;margin:0 auto;}
+
+/* basics */
+img{width:100%;}
 
 /* grid styling */
-.tileWindow{float:left; margin:5px;}
+.tileGrid .liveTile{float:left; margin:5px; display:inline-block;}
+.tileGrid {height: 695px;overflow:hidden}
 
 /* tiles code */
-img{width:100%;}
-.tileWindow,.liveTile{width:202px; height:202px;}
-.tileWindow{position:relative;overflow:hidden;display:block;}
-.peekTile,.mainTile{position:absolute;}
-.peekTile{left:0; top:-100%;}
-.mainTile{left:0; top:0;}
-.relativeText{position:relative; display:table-cell;padding:0 10px;margin:10px 0;vertical-align:bottom;height:192px; width:192px;color:#fff; font-family:Segoe UI, Verdana, Arial; font-size:30px;line-height:30px;}
-.peekTile{background:#13419F;}
+.liveTile{position:relative;overflow:hidden;display:block;color:#fff; font-family:Segoe UI, Verdana, Arial;}
+.liveTile{background:#13419F;}
 
-.tileWindow.fullWidth, .tileWindow.fullWidth .liveTile{width:414px}
-.tileWindow.fullWidth .relativeText{width:404px}
-.tileWindow.fullWidth .mainTile{height:202px;overflow:hidden}
+
+.mainTile, .peekTile{width:inherit; height:inherit;overflow:hidden;position:absolute;}
+.mainTile{left:0; top:0;}
+.peekTile{left:0; top:0;}
+
+
+/* define tile sizes */
+.titleText {display: table-cell;font-size: 30px;height: 192px;line-height: 30px;margin: 10px 0;padding: 0 10px;vertical-align: bottom;width: 192px;z-index:1;}
+.updateText{display:block; font-size:14px; padding:10px; height:192px; width:192px;}
+
+/* medium tile */
+.liveTile, [data-size="medium"]{width:202px; height:202px;}
+
+/* small tile */
+[data-size="small"]{width:96px; height:96px;}
+[data-size="small"] .peekTile{display:none;}
+[data-size="small"] .mainTile{margin-top:0;}
+
+
+
+/* large tile */
+[data-size="large"]{width:414px; height:202px;}
+[data-size="large"] .mainTile, [data-size="large"] .peekTile{width:414px; height:202px;}
+
+
+/* update tiles */
+.updateValue {background:#333;border-radius: 15px;font-weight: bold;line-height: 25px;position: absolute;right: 5px;text-align: center;top: 5px;width: 25px;z-index: 5;}
+
+
+
+
+
+
 /* keyframe animation  */
 
-/* livepeek default */ 	
-@-webkit-keyframes livePeek {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}}
-@-moz-keyframes livePeek {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}}
-@-o-keyframes livePeek {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}}
-@keyframes livePeek {0%{top:-100%;}10%{top:-100%;}20%{top:-50%;}40%{top:-50%;}50%{top:0px;}80%{top:0px;}90%{top:-100%;}100% {top:-100%;}}
+/* livePeek default */
+@keyframes livePeek{0% {transform: translateY(-100%);}10%{transform: translateY(-100%);}20% {transform: translateY(-50%);}40%{transform: translateY(-50%);}50% {transform: translateY(0);}80% {transform: translateY(0);}90% {transform: translateY(-100%);}100%{transform: translateY(-100%);}}
 
 /* livemain default */
-@-webkit-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:50%;}40%{top:50%;}50%{top:100%;}80%{top:100%;}90%{top:0px;}100% {top:0px;}}
-@-moz-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:50%;}40%{top:50%;}50%{top:100%;}80%{top:100%;}90%{top:0px;}100% {top:0px;}}
-@-o-keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:50%;}40%{top:50%;}50%{top:100%;}80%{top:100%;}90%{top:0px;}100% {top:0px;}}
-@keyframes liveMain {0%{top:0px;}10%{top:0px;}20%{top:50%;}40%{top:50%;}50%{top:100%;}80%{top:100%;}90%{top:0px;}100% {top:0px;}}
-
-/* initialize animation default*/
-.peekTile {-webkit-animation: livePeek 10s infinite;-moz-animation: livePeek 10s infinite;-o-animation:livePeek 10s infinite;animation:livePeek 10s infinite;}
-.mainTile {-webkit-animation: liveMain 10s infinite;-moz-animation: liveMain 10s infinite;-o-animation:liveMain 10s infinite;animation:liveMain 10s infinite;}
-
-/* livepeek peekDelay20 */ 	
-@-webkit-keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}} 
-@-moz-keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}} 
-@-o-keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}} 
-@keyframes peekDelay20 {0%{top:0px;}10%{top:0px;}20%{top:-100%;}40%{top:-100%;}50%{top:-50%;}80%{top:-50%}90%{top:0;}100% {top:0;}}
-
-/* livemain liveDelay20 */
-@-webkit-keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
-@-moz-keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
-@-o-keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
-@keyframes liveDelay20 {0%{top:100%;}10%{top:100%;}20%{top:0;}40%{top:0;}50%{top:50%;}80%{top:50%;}90%{top:100%;}100% {top:100%;}}
+@keyframes liveMain{0% {transform: translateY(0);}10% {transform: translateY(0);}20% {transform: translateY(50%);}40% {transform: translateY(50%);}50% {transform: translateY(100%);}80% {transform: translateY(100%);}90% {transform: translateY(0);}100% {transform: translateY(0);}}
 
 
-/* initialize delay 20 animation */
-.peekTile.delay20 {-webkit-animation: peekDelay20 10s infinite;-moz-animation: peekDelay20 10s infinite;-o-animation:peekDelay20 10s infinite;animation:peekDelay20 10s infinite;}
-.mainTile.delay20 {-webkit-animation: liveDelay20 10s infinite;-moz-animation: liveDelay20 10s infinite;-o-animation:liveDelay20 10s infinite;animation:liveDelay20 10s infinite;}
+/* initialize animation default */
+.peekTile {animation:livePeek 10s ease infinite;}
+.mainTile {animation:liveMain 10s ease infinite;}
+
+[data-sync="minus50"] .peekTile {animation:livePeek 10s 2s ease infinite;}
+[data-sync="minus50"] .mainTile {animation:liveMain 10s 2s ease infinite;}
+
+
+[data-size="small"] .peekTile{animation:none;}
+[data-size="small"] .mainTile{animation:none;}
+
+
+
+
+
+
+
+
+
+
+
