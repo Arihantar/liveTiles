@@ -11,24 +11,29 @@ function reCreate (){
 		var update = $(this).attr("data-update");
 		var size = $(this).attr("data-size");
 		
+		var clone = $(this).clone();
+		
+		
 		if (tileColor!==undefined){			
-			$(this).css("background",tileColor);
+			$(clone).css("background",tileColor);
 		}
 		
 		if (update!==undefined){			
 			if(size=="small"){				
-				$(this).children(".mainTile").before("<div class='updateValue'>"+update+"</div>")
+				$(clone).children(".mainTile").before("<div class='updateValue'>"+update+"</div>")
 			}
 			else{
-				$(this).children(".mainTile").before("<div class='peekTile'><div class='updateText' style='display:none'>"+update+"</div><div class='titleText'>"+title+"</div></div>");
+				$(clone).children(".mainTile").before("<div class='peekTile'><div class='updateText' style='display:none'>"+update+"</div><div class='titleText'>"+title+"</div></div>");
 			}
 		}
 		else{
 			if(size=="small"){}
 			else{
-			$(this).children(".mainTile").before("<div class='peekTile'><div class='titleText'>"+title+"</div></div>");
+			$(clone).children(".mainTile").before("<div class='peekTile'><div class='titleText'>"+title+"</div></div>");
 			}
 		}
+		
+		$(this).replaceWith(clone);
 	});
 }
  
